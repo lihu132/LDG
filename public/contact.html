@@ -33,6 +33,8 @@
   <!-- Template styles-->
   <link rel="stylesheet" href="css/style.css">
 
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </head>
 <body>
   <div class="body-inner">
@@ -284,7 +286,7 @@
         <h3 class="column-title">We love to hear</h3>
         <!-- contact form works with formspree.io  -->
         <!-- contact form activation doc: https://docs.themefisher.com/constra/contact-form/ -->
-        <form id="contact-form" action="#" method="post" role="form">
+        <form id="contact-form" action="https://formspree.io/f/mpznknng" method="post" role="form">
           <div class="error-container"></div>
           <div class="row">
             <div class="col-md-4">
@@ -315,6 +317,10 @@
           <div class="text-right"><br>
             <button class="btn btn-primary solid blank" type="submit">Send Message</button>
           </div>
+          <div class="text-right space-top">
+            <div class="g-recaptcha inline-block" data-sitekey="6LfmrvkiAAAAAAi4OFPWxXaJynXIXJuyXYdRqCGx"></div>
+          </div>
+        
         </form>
       </div>
 

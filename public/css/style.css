@@ -3499,3 +3499,12 @@ label {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+.inline-block{
+  display: inline-block;
+}
+
+.space-top{
+  margin-top: 30px;
+}
