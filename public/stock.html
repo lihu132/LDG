@@ -1,12 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p>hello world!</p>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      Utopian-io | How to create a Spreadsheet component using HTML and
+      JavaScript
+    </title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/handsontable/0.35.1/handsontable.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body style="padding-top: 5rem">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarsExampleDefault"
+          aria-controls="navbarsExampleDefault"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Get Started</a>
+            </li>
+          </ul>
+          <a class="btn btn-success my-2 my-sm-0" href="#"
+            ><i class="fa fa-sign-in"></i> Login</a
+          >
+        </div>
+      </div>
+    </nav>
+    <main role="main" class="container">
+      <h1>Artimber</h1>
+      <p class="lead">Artimber Stock</p>
+      <div class="container welcome-div">
+        <div id="employee"></div>
+      </div>
+    </main>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/handsontable/0.35.1/handsontable.min.js"
+    ></script>
+    <script type="text/javascript">
+      var data = [
+        {
+          Sku: "TA01",
+          "Package Size (sqm2)": 2.166,
+          Cartons: 144,
+          "total sqm": 311.904,
+          "damage cartons": 0,
+        },
+        {
+          Sku: "TA02",
+          "Package Size (sqm2)": 2.166,
+          Cartons: 91,
+          "total sqm": 197.106,
+          "damage cartons": 1,
+        },
+        {
+          Sku: "RA01",
+          "Package Size (sqm2)": 2.166,
+          Cartons: 194,
+          "total sqm": 420.204,
+          "damage cartons": 0,
+        },
+        {
+          Sku: "RA02",
+          "Package Size (sqm2)": 2.166,
+          Cartons: 6,
+          "total sqm": 12.996,
+          "damage cartons": 0,
+        },
+        {
+          Sku: "RA03",
+          "Package Size (sqm2)": 2.166,
+          Cartons: 146,
+          "total sqm": 316.236,
+          "damage cartons": 0,
+        },
+        {
+          Sku: "RA04",
+          "Package Size (sqm2)": 2.166,
+          Cartons: 145,
+          "total sqm": 314.07,
+          "damage cartons": 0,
+        },
+        {
+          Sku: "RA05",
+          "Package Size (sqm2)": 2.166,
+          Cartons: 92,
+          "total sqm": 199.272,
+          "damage cartons": 1,
+        },
+        {
+          Sku: "RA06",
+          "Package Size (sqm2)": 2.166,
+          Cartons: 97,
+          "total sqm": 210.102,
+          "damage cartons": 0,
+        },
+        {
+          Sku: "IT01",
+          "Package Size (sqm2)": 1.08,
+          Cartons: 0,
+          "total sqm": 0,
+          "damage cartons": 0,
+        },
+        {
+          Sku: "RA05-H",
+          "Package Size (sqm2)": 1.08,
+          Cartons: 180,
+          "total sqm": 194.4,
+          "damage cartons": 0,
+        },
+        {
+          Sku: "RA02-P",
+          "Package Size (sqm2)": 2.166,
+          Cartons: 82,
+          "total sqm": 177.612,
+          "damage cartons": 1,
+        },
+        {
+          Sku: "TA03",
+          "Package Size (sqm2)": 1.14,
+          Cartons: 218,
+          "total sqm": 248.52,
+          "damage cartons": 0,
+        },
+        {
+          Sku: "TA04",
+          "Package Size (sqm2)": 2.166,
+          Cartons: 19,
+          "total sqm": 41.154,
+          "damage cartons": 0,
+        },
+      ];
+      var container = document.getElementById("employee");
+      var hot = new Handsontable(container, {
+        data: data,
+        rowHeaders: true,
+        colHeaders: false,
+        colHeaders: [
+          "SKU",
+          "Package Size (sqm2)",
+          "Cartons",
+          "total sqm",
+          "damage cartons",
+        ],
+        columnSorting: true,
+        sortIndicator: true,
+      });
+    </script>
+  </body>
 </html>
